@@ -15,7 +15,15 @@
 		5575EE052C952136005E5879 /* Sacrena_DemoChat.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 5575EE032C952136005E5879 /* Sacrena_DemoChat.xcdatamodeld */; };
 		5575EE112C952358005E5879 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5575EE102C952358005E5879 /* AppDelegate.swift */; };
 		5595296F2C953E300023CABE /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5595296E2C953E300023CABE /* SceneDelegate.swift */; };
-		559529722C959FB90023CABE /* StreamChatSwiftUI in Frameworks */ = {isa = PBXBuildFile; productRef = 559529712C959FB90023CABE /* StreamChatSwiftUI */; };
+		559529892C9675DB0023CABE /* CustomFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 559529882C9675DB0023CABE /* CustomFactory.swift */; };
+		55C57A7C2C96C02F004B6C54 /* CustomChannelHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55C57A7B2C96C02F004B6C54 /* CustomChannelHeader.swift */; };
+		55C57A7E2C96C0E2004B6C54 /* CustomChannelListItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55C57A7D2C96C0E2004B6C54 /* CustomChannelListItem.swift */; };
+		55C57A802C96C12C004B6C54 /* CustomChannelNavigationItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55C57A7F2C96C12C004B6C54 /* CustomChannelNavigationItem.swift */; };
+		55C57A822C96C16D004B6C54 /* Colors_Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55C57A812C96C16D004B6C54 /* Colors_Ext.swift */; };
+		55C57A852C96C1D8004B6C54 /* CustomHelperViews.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55C57A842C96C1D8004B6C54 /* CustomHelperViews.swift */; };
+		55C754372C96F722004CF492 /* StreamChatSwiftUI in Frameworks */ = {isa = PBXBuildFile; productRef = 55C754362C96F722004CF492 /* StreamChatSwiftUI */; };
+		55C754392C971150004CF492 /* CustomChatChannelHeadModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55C754382C971150004CF492 /* CustomChatChannelHeadModifier.swift */; };
+		55C7543B2C9711B9004CF492 /* CustomMessageComposerModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55C7543A2C9711B9004CF492 /* CustomMessageComposerModifier.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +36,14 @@
 		5575EE042C952136005E5879 /* Sacrena_DemoChat.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Sacrena_DemoChat.xcdatamodel; sourceTree = "<group>"; };
 		5575EE102C952358005E5879 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		5595296E2C953E300023CABE /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		559529882C9675DB0023CABE /* CustomFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomFactory.swift; sourceTree = "<group>"; };
+		55C57A7B2C96C02F004B6C54 /* CustomChannelHeader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomChannelHeader.swift; sourceTree = "<group>"; };
+		55C57A7D2C96C0E2004B6C54 /* CustomChannelListItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomChannelListItem.swift; sourceTree = "<group>"; };
+		55C57A7F2C96C12C004B6C54 /* CustomChannelNavigationItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomChannelNavigationItem.swift; sourceTree = "<group>"; };
+		55C57A812C96C16D004B6C54 /* Colors_Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Colors_Ext.swift; sourceTree = "<group>"; };
+		55C57A842C96C1D8004B6C54 /* CustomHelperViews.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomHelperViews.swift; sourceTree = "<group>"; };
+		55C754382C971150004CF492 /* CustomChatChannelHeadModifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomChatChannelHeadModifier.swift; sourceTree = "<group>"; };
+		55C7543A2C9711B9004CF492 /* CustomMessageComposerModifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomMessageComposerModifier.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -35,7 +51,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				559529722C959FB90023CABE /* StreamChatSwiftUI in Frameworks */,
+				55C754372C96F722004CF492 /* StreamChatSwiftUI in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -65,6 +81,14 @@
 				5575EE102C952358005E5879 /* AppDelegate.swift */,
 				5595296E2C953E300023CABE /* SceneDelegate.swift */,
 				5575EDFA2C952135005E5879 /* ContentView.swift */,
+				559529882C9675DB0023CABE /* CustomFactory.swift */,
+				55C57A832C96C17B004B6C54 /* Extensions */,
+				55C57A7F2C96C12C004B6C54 /* CustomChannelNavigationItem.swift */,
+				55C57A7D2C96C0E2004B6C54 /* CustomChannelListItem.swift */,
+				55C57A7B2C96C02F004B6C54 /* CustomChannelHeader.swift */,
+				55C57A842C96C1D8004B6C54 /* CustomHelperViews.swift */,
+				55C754382C971150004CF492 /* CustomChatChannelHeadModifier.swift */,
+				55C7543A2C9711B9004CF492 /* CustomMessageComposerModifier.swift */,
 				5575EDFC2C952136005E5879 /* Assets.xcassets */,
 				5575EE012C952136005E5879 /* Persistence.swift */,
 				5575EE032C952136005E5879 /* Sacrena_DemoChat.xcdatamodeld */,
@@ -79,6 +103,14 @@
 				5575EDFF2C952136005E5879 /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		55C57A832C96C17B004B6C54 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				55C57A812C96C16D004B6C54 /* Colors_Ext.swift */,
+			);
+			path = Extensions;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -98,7 +130,7 @@
 			);
 			name = Sacrena_DemoChat;
 			packageProductDependencies = (
-				559529712C959FB90023CABE /* StreamChatSwiftUI */,
+				55C754362C96F722004CF492 /* StreamChatSwiftUI */,
 			);
 			productName = Sacrena_DemoChat;
 			productReference = 5575EDF52C952135005E5879 /* Sacrena_DemoChat.app */;
@@ -129,7 +161,7 @@
 			);
 			mainGroup = 5575EDEC2C952135005E5879;
 			packageReferences = (
-				559529702C959FB90023CABE /* XCRemoteSwiftPackageReference "stream-chat-swiftui" */,
+				55C754352C96F722004CF492 /* XCRemoteSwiftPackageReference "stream-chat-swiftui" */,
 			);
 			productRefGroup = 5575EDF62C952135005E5879 /* Products */;
 			projectDirPath = "";
@@ -158,9 +190,17 @@
 			buildActionMask = 2147483647;
 			files = (
 				5575EE022C952136005E5879 /* Persistence.swift in Sources */,
+				55C7543B2C9711B9004CF492 /* CustomMessageComposerModifier.swift in Sources */,
+				55C57A7C2C96C02F004B6C54 /* CustomChannelHeader.swift in Sources */,
 				5575EDFB2C952135005E5879 /* ContentView.swift in Sources */,
+				55C57A802C96C12C004B6C54 /* CustomChannelNavigationItem.swift in Sources */,
+				55C754392C971150004CF492 /* CustomChatChannelHeadModifier.swift in Sources */,
 				5575EE052C952136005E5879 /* Sacrena_DemoChat.xcdatamodeld in Sources */,
+				55C57A7E2C96C0E2004B6C54 /* CustomChannelListItem.swift in Sources */,
+				559529892C9675DB0023CABE /* CustomFactory.swift in Sources */,
+				55C57A852C96C1D8004B6C54 /* CustomHelperViews.swift in Sources */,
 				5575EE112C952358005E5879 /* AppDelegate.swift in Sources */,
+				55C57A822C96C16D004B6C54 /* Colors_Ext.swift in Sources */,
 				5575EDF92C952135005E5879 /* Sacrena_DemoChatApp.swift in Sources */,
 				5595296F2C953E300023CABE /* SceneDelegate.swift in Sources */,
 			);
@@ -299,6 +339,10 @@
 				DEVELOPMENT_TEAM = K7R8KD6AZ8;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "Sacrena-DemoChat-Info.plist";
+				INFOPLIST_KEY_NSAppleMusicUsageDescription = "";
+				INFOPLIST_KEY_NSCameraUsageDescription = "";
+				INFOPLIST_KEY_NSPhotoLibraryUsageDescription = "";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -328,6 +372,10 @@
 				DEVELOPMENT_TEAM = K7R8KD6AZ8;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "Sacrena-DemoChat-Info.plist";
+				INFOPLIST_KEY_NSAppleMusicUsageDescription = "";
+				INFOPLIST_KEY_NSCameraUsageDescription = "";
+				INFOPLIST_KEY_NSPhotoLibraryUsageDescription = "";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -370,7 +418,7 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
-		559529702C959FB90023CABE /* XCRemoteSwiftPackageReference "stream-chat-swiftui" */ = {
+		55C754352C96F722004CF492 /* XCRemoteSwiftPackageReference "stream-chat-swiftui" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/getstream/stream-chat-swiftui";
 			requirement = {
@@ -381,9 +429,9 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
-		559529712C959FB90023CABE /* StreamChatSwiftUI */ = {
+		55C754362C96F722004CF492 /* StreamChatSwiftUI */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = 559529702C959FB90023CABE /* XCRemoteSwiftPackageReference "stream-chat-swiftui" */;
+			package = 55C754352C96F722004CF492 /* XCRemoteSwiftPackageReference "stream-chat-swiftui" */;
 			productName = StreamChatSwiftUI;
 		};
 /* End XCSwiftPackageProductDependency section */

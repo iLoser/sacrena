@@ -7,7 +7,6 @@
 
 import SwiftUI
 import StreamChat
-import StreamChatUI
 
 extension ChatClient {
     static var shared: ChatClient!
