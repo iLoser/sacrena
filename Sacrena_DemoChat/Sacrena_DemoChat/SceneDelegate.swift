@@ -33,7 +33,7 @@ class SceneDelegate: NSObject, UIWindowSceneDelegate {
         colors.messageCurrentUserTextColor = UIColor(Color.black)
         colors.messageOtherUserTextColor = UIColor(Color(hex: "#2b2d28"))
         
-        fonts.body = Font.caption2
+        fonts.body = Font.subheadline
 
         let appearance = Appearance(colors: colors, fonts: fonts)
         

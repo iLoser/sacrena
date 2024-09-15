@@ -16,3 +16,19 @@ struct BackgroundViewModifier: ViewModifier {
             .background(Color(hex: "#272727"))
     }
 }
+
+struct CustomSendMessageButton: View {
+    let enabled: Bool
+    let onTap: () -> Void
+
+    var body: some View {
+        Button(action: onTap, label: {
+            Image(systemName: "arrow.up")
+                .foregroundColor(enabled ? .white : .gray)
+                .padding(EdgeInsets(top: 5, leading: 5, bottom: 5, trailing: 5))
+                .background(enabled ? Color.blue : Color.gray.opacity(0.3))
+                .clipShape(Circle())
+        })
+        .disabled(!enabled)
+    }
+}

@@ -77,7 +77,54 @@ class CustomFactory: ViewFactory {
     func makeComposerViewModifier() -> some ViewModifier {
         BackgroundViewModifier()
     }
+    
+    func makeLeadingComposerView(
+        state: Binding<PickerTypeState>,
+        channelConfig: ChannelConfig?
+    ) -> some View {
+        EmptyView()
+    }
 
+    func makeComposerInputView(
+        text: Binding<String>,
+        selectedRangeLocation: Binding<Int>,
+        command: Binding<ComposerCommand?>,
+        addedAssets: [AddedAsset],
+        addedFileURLs: [URL],
+        addedCustomAttachments: [CustomAttachment],
+        quotedMessage: Binding<ChatMessage?>,
+        maxMessageLength: Int?,
+        cooldownDuration: Int,
+        onCustomAttachmentTap: @escaping (CustomAttachment) -> Void,
+        shouldScroll: Bool,
+        removeAttachmentWithId: @escaping (String) -> Void
+    ) -> some View {
+        HStack(alignment: .bottom) {
+            Button(action: {
+                // Handle camera button tap here
+            }) {
+                Image(systemName: "camera")
+                    .foregroundColor(.white)
+                    .frame(width: 40, height: 40)
+            }
+            
+            TextField("", text: text, prompt: Text("  Message")
+                .foregroundColor(.gray)
+                .fontWeight(.thin)
+            )
+            .keyboardType(.default) // Set the keyboard type if needed
+            .roundWithBorder()// Customize the text field style
+            .frame(height: 50)
+        }
+    }
+    
+    func makeTrailingComposerView(
+        enabled: Bool,
+        cooldownDuration: Int,
+        onTap: @escaping () -> Void
+    ) -> some View {
+        CustomSendMessageButton(enabled: enabled, onTap: onTap)
+    }
     
 }
 
