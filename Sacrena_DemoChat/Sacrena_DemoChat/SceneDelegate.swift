@@ -27,7 +27,6 @@ class SceneDelegate: NSObject, UIWindowSceneDelegate {
         var colors = ColorPalette()
         var fonts = Fonts()
         
-        colors.background = UIColor(Color(hex: "#272727"))
         colors.messageCurrentUserBackground = [UIColor(Color(hex: "#cdff3a"))]
         colors.messageOtherUserBackground = [UIColor(Color(hex: "#ffffff"))]
         colors.messageCurrentUserTextColor = UIColor(Color.black)
