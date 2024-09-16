@@ -67,8 +67,8 @@ struct CustomChatChannelHeader: View {
                         Text(utils.channelNamer(channel, chatClient.currentUserId) ?? "User Name")
                             .font(fonts.bodyBold)
                             .foregroundColor(.black)
-                            .lineLimit(1)
                             .minimumScaleFactor(0.5)
+                            .frame(maxWidth: 200)
                             .padding(.horizontal, 10)
                     }
                 }
