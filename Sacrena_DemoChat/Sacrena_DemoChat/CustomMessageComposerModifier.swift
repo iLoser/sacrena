@@ -23,14 +23,16 @@ struct CustomSendMessageButton: View {
     let onTap: () -> Void
 
     var body: some View {
-        Button(action: onTap, label: {
-            Image(systemName: "arrow.up")
-                .foregroundColor(enabled ? .white : .gray)
-                .padding(EdgeInsets(top: 5, leading: 5, bottom: 5, trailing: 5))
-                .background(enabled ? Color.blue : Color.gray.opacity(0.3))
-                .clipShape(Circle())
-        })
-        .disabled(!enabled)
+        VStack {
+            Button(action: onTap, label: {
+                Image(systemName: "arrow.up")
+                    .foregroundColor(enabled ? .white : .gray)
+                    .padding(EdgeInsets(top: 5, leading: 5, bottom: 5, trailing: 5))
+                    .background(enabled ? Color.blue : Color.gray.opacity(0.3))
+                    .clipShape(Circle())
+            })
+            .disabled(!enabled)
+        }.padding(.bottom, 15)
     }
 }
 
@@ -47,6 +49,7 @@ struct CustomMessageComposerModifier: View {
                 Image(systemName: "camera")
                     .foregroundColor(.white)
                     .frame(width: 40, height: 40)
+                    .padding(.top, 16)
             }
             .sheet(isPresented: $showImagePicker) {
                 ImagePicker(sourceType: .camera) { image in
@@ -56,13 +59,15 @@ struct CustomMessageComposerModifier: View {
             }
 
             TextField("", text: $text, prompt: Text("  Message")
-                .foregroundColor(.gray)
                 .fontWeight(.thin)
+                .foregroundColor(.gray)
             )
+            .padding(.leading, 10)
             .keyboardType(.default)
-            .frame(height: 50)
-            .overlay(RoundedRectangle(cornerRadius: 8).stroke(Color.gray))
+            .frame(height: 35)
+            .overlay(RoundedRectangle(cornerRadius: 17.5).stroke(Color.gray))
         }
+        .padding(.bottom, 10)
     }
 }
 

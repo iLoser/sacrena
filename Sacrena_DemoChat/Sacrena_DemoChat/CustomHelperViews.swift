@@ -38,7 +38,7 @@ struct CustomOnlineIndicatorView: View {
 struct SimpleCircleView: View {
     var body: some View {
         Circle()
-            .fill(Color.white)  // Fill the circle with white color
+            .fill(Color.black)  // Fill the circle with white color
             .frame(width: 6, height: 6)  // Set the size of the circle
             .shadow(radius: 5)  // Optional: Add a shadow for a better look
     }

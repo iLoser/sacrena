@@ -17,36 +17,36 @@ struct CustomChatChannelHeaderModifier: ChatChannelHeaderViewModifier {
     @State private var isActive: Bool = false
     
     func body(content: Content) -> some View {
-        content.toolbar {
-            CustomChatChannelHeader(channel: channel, avatar: channelHeaderLoader.image(for: channel))
-        }
-        .navigationBarBackButtonHidden(true)
-        .padding(EdgeInsets(top: 0, leading: 0, bottom: 0, trailing: 0))
-        .frame(maxWidth: .infinity)
+        content
+            .toolbar {
+                ToolbarItem(placement: .principal) {
+                    CustomChatChannelHeader(channel: channel, avatar: channelHeaderLoader.image(for: channel))
+                }
+            }
+            .navigationBarBackButtonHidden(true)
     }
+    
 }
 
-struct CustomChatChannelHeader: ToolbarContent {
+struct CustomChatChannelHeader: View {
 
-  @Injected(\.fonts) var fonts
-  @Injected(\.images) var images
-  @Injected(\.utils) private var utils
-  @Injected(\.chatClient) private var chatClient
-  @Environment(\.presentationMode) var presentationMode
+    @Injected(\.fonts) var fonts
+    @Injected(\.images) var images
+    @Injected(\.utils) private var utils
+    @Injected(\.chatClient) private var chatClient
+    @Environment(\.presentationMode) var presentationMode
 
-  public var channel: ChatChannel
-  let avatar: UIImage
+    public var channel: ChatChannel
+    let avatar: UIImage
 
-  private var onlineIndicatorShown: Bool {
-    !channel.lastActiveMembers.filter { member in
-      member.id != chatClient.currentUserId && member.isOnline
+    private var onlineIndicatorShown: Bool {
+        !channel.lastActiveMembers.filter { member in
+            member.id != chatClient.currentUserId && member.isOnline
+        }
+        .isEmpty
     }
-    .isEmpty
-  }
 
-  var body: some ToolbarContent {
-      // Back button and avatar on the left
-      ToolbarItem(placement: .topBarLeading) {
+    var body: some View {
         ZStack {
             HStack {
                 Button(action: {
@@ -54,37 +54,33 @@ struct CustomChatChannelHeader: ToolbarContent {
                 }) {
                     HStack {
                         Image(systemName: "arrow.left")
-                            .foregroundColor(.white)
+                            .foregroundColor(.black)
                         Image(uiImage: avatar)
                             .resizable()
                             .frame(width: 30, height: 30)
                             .clipShape(Circle())
-                            .padding(.vertical, 10)
-                            .padding(.leading, 5)
                             .overlay(
-                                onlineIndicatorShown ? Circle().fill(Color.green).frame(width: 10, height: 10).offset(x: -16, y: 12) : nil
+                                onlineIndicatorShown ? Circle().fill(Color.green)
+                                    .frame(width: 10, height: 10)
+                                    .offset(x: -16, y: 12) : nil
                             )
                         Text(utils.channelNamer(channel, chatClient.currentUserId) ?? "User Name")
                             .font(fonts.bodyBold)
-                            .accessibilityIdentifier("chatName")
-                            .font(.headline)
-                            .foregroundColor(.white)
-                            .minimumScaleFactor(0.5) // Allow text to shrink on longer names
-                            .lineLimit(1) // Limit text to a single line
-                            .padding(.horizontal, 10) // Adjust padding if needed
+                            .foregroundColor(.black)
+                            .lineLimit(1)
+                            .minimumScaleFactor(0.5)
+                            .padding(.horizontal, 10)
                     }
                 }
-                // Three circles on the right (optional, adjust if needed)
+                Spacer() // Ensures content pushes left
                 HStack(spacing: 4) {
                     SimpleCircleView()
                     SimpleCircleView()
                     SimpleCircleView()
                 }
-                .padding()
-                .foregroundColor(.white)
             }
         }
-        .background(Color(hex: "#272727"))
-      }
+        
     }
 }
+
